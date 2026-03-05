@@ -18,7 +18,8 @@
             color: #2B3116;
             font-family: 'Google Sans Flex', sans-serif;
             padding: 0 10%;
-            margin: 0;
+            margin: 0 auto;
+            max-width: 1400px;
         }
 
         a {
@@ -31,7 +32,7 @@
         }
 
         .hero {
-            min-height: 100vh;
+            padding: 160px 0 80px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -61,15 +62,17 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0 0 48px 0;
+            margin: 0 0 24px 0;
             opacity: 0.6;
         }
 
-        .product {
-            margin-bottom: 64px;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
-        .product:last-child {
+        .product {
             margin-bottom: 0;
         }
 
@@ -93,8 +96,8 @@
         .product-description {
             font-size: 18px;
             font-weight: 400;
-            margin: 8px 0 0 0;
-            max-width: 560px;
+            margin: 12px 0 0 0;
+            max-width: 600px;
             line-height: 1.5;
         }
 
@@ -103,20 +106,20 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin: 12px 0 0 0;
+            margin: 4px 0 0 0;
             opacity: 0.5;
         }
 
         .about {
             padding: 0 0 120px 0;
-            max-width: 560px;
         }
 
-        .about p {
+        .about p:not(.section-label) {
             font-size: 18px;
             font-weight: 400;
             line-height: 1.6;
             margin: 0;
+            max-width: 600px;
         }
 
         .contact {
@@ -148,6 +151,11 @@
                 font-size: 20px;
             }
 
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 64px;
+            }
+
             .product-name {
                 font-size: 24px;
             }
@@ -168,22 +176,24 @@
     <section class="products">
         <p class="section-label">Products</p>
 
-        <div class="product">
-            <h2 class="product-name"><a href="https://haptix.dev">Haptix</a></h2>
-            <p class="product-description">An MCP server that lets AI agents see, touch, and control iOS simulators and devices in real time. Stop building blind.</p>
-            <p class="product-type">Developer Tools</p>
-        </div>
+        <div class="product-grid">
+            <div class="product">
+                <h2 class="product-name"><a href="https://www.haptix.dev" target="_blank">Haptix</a></h2>
+                <p class="product-type">Developer Tools</p>
+                <p class="product-description">An MCP server that lets AI agents see, touch, and control iOS simulators and devices in real time. Stop building blind.</p>
+            </div>
 
-        <div class="product">
-            <h2 class="product-name"><a href="https://humanique.co">Humanique</a></h2>
-            <p class="product-description">A blood pressure diary that helps you and your physician see the full picture. Track readings over time so every visit is a better conversation.</p>
-            <p class="product-type">Health</p>
-        </div>
+            <div class="product">
+                <h2 class="product-name"><a href="https://humanique.co" target="_blank">Humanique</a></h2>
+                <p class="product-type">Health</p>
+                <p class="product-description">A blood pressure diary that helps you and your physician see the full picture. Track readings over time so every visit is a better conversation.</p>
+            </div>
 
-        <div class="product">
-            <h2 class="product-name"><a href="https://brixels.co">Brixels</a></h2>
-            <p class="product-description">A block puzzle game with vintage soul and strategic depth. Relaxing, beautiful, and endlessly replayable.</p>
-            <p class="product-type">Games</p>
+            <div class="product">
+                <h2 class="product-name"><a href="https://brixels.co" target="_blank">Brixels</a></h2>
+                <p class="product-type">Games</p>
+                <p class="product-description">A block puzzle game with vintage soul and strategic depth. Relaxing, beautiful, and endlessly replayable.</p>
+            </div>
         </div>
     </section>
 
